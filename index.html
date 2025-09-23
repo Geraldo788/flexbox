@@ -1,145 +1,88 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Práctica Flexbox + BEM</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <nav class="navbar">
-        <a href="#" class="navbar__tex">Inicio</a>
-        <a href="#" class="navbar__tex">Servicios</a>
-        <a href="#" class="navbar__tex">Productos</a>
-        <a href="#" class="navbar__tex">Contacto</a>
-    </nav>
 
-    <div class="card">
-<img class="card__img" src="https://cdn.pixabay.com/photo/2020/09/18/21/14/dessert-5582984_960_720.jpg" alt="postre">
-        <p class="cardtex">
-            El postre es un plato dulce para después de la comida. 
-            Un postre es una comida dulce que se consume al final de una comida. 
-            Por lo general, se sirve después del plato principal y suele tener sabores dulces, 
-            aunque también puede incluir ingredientes como frutas, lácteos, chocolate, nueces, entre otros
-        </p>
-        
-        <button type="input">Enviar</button>
+  <!-- 1. Barra de navegación -->
+  <nav class="navbar">
+    <img src="imagenes/dulces.png" alt="">
+    <ul class="navbar__menu">
+      <li class="navbar__inicio"><a href="#">Inicio</a></li>
+      <li class="navbar__servicios"><a href="#">Servicios</a></li>
+      <li class="navbar__contacto"><a href="#">Contacto</a></li>
+    </ul>
+  </nav>
 
+  <!-- 2. Tarjeta de producto -->
+  <section class="products">
+    <div class="product-card">
+      <img src="https://cdn.pixabay.com/photo/2015/12/11/16/24/cheese-1088403_1280.jpg" alt="Producto" class="product-card__image">
+      <p class="product-card__description">Un postre cremoso tipo flan a base de leche condensada y huevos, muy popular en Venezuela, y un tipo de queso blanco fresco y tierno con una textura "chicluda" o de hebra.</p>
+      <button class="product-card__button">Comprar</button>
     </div>
+  </section>
 
+  <!-- 3. Galería de imágenes -->
+  <section class="gallery">
+    <img src="https://cdn.pixabay.com/photo/2016/05/04/19/05/cookies-1372607_1280.jpg" alt="" class="gallery__item">
+    <img src="https://media.istockphoto.com/id/905563616/es/foto/preparaci%C3%B3n-de-galletas-de-chispas-de-chocolate.jpg?s=1024x1024&w=is&k=20&c=wprQoP3h4FM8R0vyUBKsukKC406hcRDaLcbPCzoueHI=" alt="" class="gallery__item">
+    <img src="https://media.istockphoto.com/id/877048276/es/foto/galletas-con-chocolate-sobre-un-fondo-de-madera-vista-superior-espacio-libre-para-el-texto.jpg?s=1024x1024&w=is&k=20&c=CZ4Gz46-UTWLMDrzIUCGMrzIfw43LRh1GeT80BsmqvM=" alt="" class="gallery__item">
+  </section>
 
-    <section class="galeria">
-        <h1>Menu de Postres</h1>
-                <a href="#"> 
-            <img src="imagenes/dulces.png" alt="encabezado-galeria">
-        </a>
-        
+  <!-- 4. Formulario de contacto -->
+  <section class="contact">
+    <form class="contact-form">
+      <input type="text" placeholder="Nombre" class="contact-form__input">
+      <input type="email" placeholder="Correo" class="contact-form__input">
+      <textarea placeholder="Mensaje" class="contact-form__textarea"></textarea>
+      <button class="contact-form__button">Enviar</button>
+    </form>
+  </section>
 
-    <div class="galeria-container">
-        <img class="galeria__brownie" src="https://media.istockphoto.com/id/1191431503/photo/delicious-brownies-with-melted-chocolate-on-a-stack.webp?s=2048x2048&w=is&k=20&c=UzkG-t8NzXmKdqTa-l64ZGPdAykgDlkN6ceGPzOYo7g=" alt="imagen1">
-        <p>descripcion</p> 
-        <p>$500</p>
-        <button>
-            <button type="input">comprar</button>
-        </button>
+  <!-- 5. Encabezado de sección -->
+  <div class="section-header">
+    <span class="section-header__icon">⭐</span>
+    <h2 class="section-header__title">Nuestros Servicios</h2>
+  </div>
 
-    </div>
+  <!-- 6. Lista de tareas -->
+  <ul class="task-list">
+    <li class="task-list__item">Tarea 1</li>
+    <li class="task-list__item">Tarea 2</li>
+    <li class="task-list__item">Tarea 3</li>
+  </ul>
 
-    <div class="galeria-container">
-        <img class="galeria__cake" src="https://media.istockphoto.com/id/1151647145/photo/cake-with-chocolate-decorated-with-various-berries-on-a-white-table.webp?s=2048x2048&w=is&k=20&c=mznj0weuVRxWmVk19fCn-lDokQzvgYdDtitArp6M920=" alt="imagen2">
-        <p>descripcion</p>
-         <p>$500</p>
-        <button>
-            <button type="input">comprar</button>
-        </button>
-    </div>
+  <!-- 7. Testimonial -->
+  <div class="testimonial">
+    <img src="https://via.placeholder.com/60" alt="Persona" class="testimonial__avatar">
+    <p class="testimonial__text">Este es un comentario de un cliente satisfecho.</p>
+  </div>
 
-    <div class="galeria-container">
-        <img class="galeria__malteada" src="https://media.istockphoto.com/id/1041580210/es/foto/chocolate-caliente-con-crema-batida-bebida-de-chocolate-y-decoraciones-de-la-navidad.webp?s=2048x2048&w=is&k=20&c=nQkzWaEOdw9Lf2nSKJpNAWRgSYilZXK3giyc95HSkEk=" alt="imagen3">
-        <p>descripcion</p>
-         <p>$500</p>
-        <button>
-            <button type="input">comprar</button>
-        </button>
-    </div>
+  <!-- 8. Footer -->
+  <footer class="footer">
+    <div class="footer__col">Columna 1</div>
+    <div class="footer__col">Columna 2</div>
+    <div class="footer__col">Columna 3</div>
+  </footer>
 
-    </section>
+  <!-- 9. Sección de precios -->
+  <section class="pricing">
+    <div class="pricing__card">Plan Básico</div>
+    <div class="pricing__card">Plan Pro</div>
+    <div class="pricing__card">Plan Premium</div>
+  </section>
 
-    <div class="formulario">
-        <form class="form-container">
-                <div class="form-group">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    
-                    <div class="input-with-icon">
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                </div>
-                
-                <div class="form-group">
-                    <label for="telefono">Teléfono:</label>
-                    <input type="tel" id="telefono" name="telefono">
-                </div>
-                
-                <button type="submit">Enviar</button>
-            </form>
-    </div>
-    
-    <div>
-    <table>
-  <caption>Lista de Precios</caption>
-  <thead>
-    <tr>
-      <th>Postre</th>
-      <th>Precio</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>brownie</td>
-      <td>500</td>
-    </tr>
-    <tr>
-      <td>malteadas</td>
-      <td>500</td>
-    </tr>
-  </tbody>
-</table>
-
-    </div>
-
-    <section>
-        <div>
-            <ul>
-                <li>tarea 1 </li>
-                <li>tarea 2 </li>
-                <li>tarea 3 </li>
-                <li>tarea 4</li>
-            </ul>
-        </div>
-       
-    </section>
-
-<div class="testimonio">
-    <img src="#" alt="avatar">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, qui!</p>
-</div>
-
-<section>
-     <nav class="sidebar">
-        <a href="#" class="sidebar__inicio">Inicio</a>
-        <a href="#" class="sidebar__servicios">Servicios</a>
-        <a href="#" class="sidebar__productos">Productos</a>
-        <a href="#" class="sidebar__contacto">Contacto</a>
-    </nav>
-</section>
+  <!-- 10. Sidebar -->
+  <aside class="sidebar">
+    <a href="#" class="sidebar__item">Inicio</a>
+    <a href="#" class="sidebar__item">Perfil</a>
+    <a href="#" class="sidebar__item">Configuración</a>
+  </aside>
 
 </body>
 </html>

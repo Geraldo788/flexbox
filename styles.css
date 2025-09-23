@@ -1,51 +1,188 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: 0;
-    background-color: rgb(141, 120, 106);
-    
-   }
-
-.card__img{
-    width: 100%;
-    height: auto;
-    
-
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  padding: 1rem;
+  
 }
 
-.card{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    height: auto;
+/* 1. Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #222;
+  padding: 1rem;
+  color: #fff;
+}
+
+.navbar img {
+  width: 4%;
+  height: auto;
+  margin-right: 60rem;
+}
+.navbar__menu {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+.navbar__item a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* 2. Product card */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  max-width: 250px;
+  margin: 1rem auto;
+  background-color: rgb(73, 33, 19);
+  border-radius: 20px;
+}
+
+.product-card__description{
+    background-color: rgba(49, 6, 6, 0.363);
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
 }
 
 
-.navbar{
-    background-color: antiquewhite;
-    text-align: center;
-    height: 50px;
-    
+.product-card__image {
+  width: 100%;
+  border-radius: 8px;
+}
+.product-card__button {
+  margin-top: auto;
+  padding: .5rem 1rem;
 }
 
-.navbar__tex{
-    text-decoration: none;
-    font-family: "Roboto", sans-serif;
-
+/* 3. Gallery */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem 0;
 }
 
-.galeria-container img{
-    flex-direction: column;
-    width: 100%;
-    height: auto;
-
+.gallery__item {
+  flex: 1 1 200px;
+  max-width: 300px;
+  border-radius: 20px;
 }
 
-.galeria-container{
-    display: flex;
-    flex-direction: column;
-    background-color: aqua;
-    width: 50%;
-    height: auto;
-
+/* 4. Contact form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 2rem auto;
 }
+.contact-form__input,
+.contact-form__textarea {
+  width: 100%;
+  padding: .5rem;
+  border: 1px solid #ccc;
+}
+.contact-form__button {
+  padding: .5rem;
+  background: #222;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* 5. Section header */
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  margin: 2rem 0 1rem;
+}
+.section-header__icon {
+  font-size: 1.5rem;
+}
+
+/* 6. Task list */
+.task-list {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  margin-bottom: 2rem;
+}
+.task-list__item {
+  padding: .5rem 1rem;
+  border: 1px solid #ccc;
+}
+
+/* 7. Testimonial */
+.testimonial {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+.testimonial__avatar {
+  width: 60px;
+  border-radius: 50%;
+}
+
+/* 8. Footer */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background: #333;
+  color: #fff;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+.footer__col {
+  flex: 1;
+  text-align: center;
+}
+
+/* 9. Pricing */
+.pricing {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+.pricing__card {
+  flex: 1;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* 10. Sidebar */
+/* .sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 200px;
+  height: 100vh;
+  background: #222;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.sidebar__item {
+  color: #fff;
+  text-decoration: none;
+  padding: .5rem;
+} */
