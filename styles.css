@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    background-color: rgb(141, 120, 106);
+    
+   }
+
+.card__img{
+    width: 100%;
+    height: auto;
+    
+
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: auto;
+}
+
+
+.navbar{
+    background-color: antiquewhite;
+    text-align: center;
+    height: 50px;
+    
+}
+
+.navbar__tex{
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+
+}
+
+.galeria-container img{
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+
+}
+
+.galeria-container{
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    width: 50%;
+    height: auto;
+
+}
