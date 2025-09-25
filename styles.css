@@ -8,7 +8,8 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.5;
-  padding: 1rem;
+  margin-left: 200px;
+  background-color: #cc8e6c73;
   
 }
 
@@ -17,6 +18,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   background: #222;
   padding: 1rem;
   color: #fff;
@@ -71,6 +73,7 @@ body {
 .gallery {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   gap: 1rem;
   margin: 2rem 0;
 }
@@ -169,7 +172,7 @@ body {
 }
 
 /* 10. Sidebar */
-/* .sidebar {
+.sidebar {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -185,4 +188,4 @@ body {
   color: #fff;
   text-decoration: none;
   padding: .5rem;
-} */
+}
